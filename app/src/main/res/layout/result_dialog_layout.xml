@@ -11,15 +11,25 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <com.wang.avi.AVLoadingIndicatorView
-            android:id="@+id/aviLoader"
+
+        <RelativeLayout
+            android:id="@+id/aviLoaderHolderView"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            >
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/aviLoader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:visibility="visible"
             app:indicatorColor="@color/colorPrimary"
             app:indicatorName="BallClipRotatePulseIndicator" />
+
+        </RelativeLayout>
+
 
         <ImageView
             android:id="@+id/iViewResult"

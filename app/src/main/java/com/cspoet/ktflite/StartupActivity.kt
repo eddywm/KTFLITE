@@ -51,11 +51,13 @@ class StartupActivity : AppCompatActivity() {
 
         val ivImageResult = customProgressView.findViewById<ImageView>(R.id.iViewResult)
 
-        val aviIconLoader = customProgressView.findViewById<AVLoadingIndicatorView>(R.id.aviLoader)
-
         val tvLoadingText = customProgressView.findViewById<TextView>(R.id.tvLoadingRecognition)
 
         val tvTextResults = customProgressView.findViewById<TextView>(R.id.tvResult)
+
+
+        // The Loader Holder is used due to a bug in the Avi Loader library
+        val aviLoaderHolder = customProgressView.findViewById<View>(R.id.aviLoaderHolderView)
 
 
         cameraView.addCameraKitListener(object : CameraKitEventListener {
@@ -73,7 +75,7 @@ class StartupActivity : AppCompatActivity() {
 
                 bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false)
 
-                aviIconLoader.hide()
+                aviLoaderHolder.visibility = View.GONE
                 tvLoadingText.visibility = View.GONE
 
                 val results = classifier.recognizeImage(bitmap)
@@ -106,6 +108,12 @@ class StartupActivity : AppCompatActivity() {
             ivImageResult.visibility = View.GONE
 
 
+
+        }
+
+        resultDialog.setOnDismissListener {
+            tvLoadingText.visibility = View.VISIBLE
+            aviLoaderHolder.visibility = View.VISIBLE
 
         }
 
