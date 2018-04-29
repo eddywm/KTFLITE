@@ -9,7 +9,7 @@ interface IClassifier {
             var confidence: Float = 0F // A sortable score for how good the recognition is relative to others. Higher should be better.
     )  {
         override fun toString(): String {
-            return "Title='$title', Confidence=$confidence)"
+            return "Title = $title, Confidence = $confidence)"
         }
     }
 
