@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cspoet.ktflite.MainActivity">
+    tools:context="com.cspoet.ktflite.StartupActivity">
 
     <com.wonderkiln.camerakit.CameraView
         android:id="@+id/cameraView"
@@ -46,13 +46,13 @@
 
     <Button
         android:id="@+id/btnToggleCamera"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="50dp"
         android:text="@string/toggle_camera"
-        android:textAllCaps="false"
-        android:textColor="@android:color/black" />
+        android:background="@drawable/button_style"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btnDetectObject"
@@ -62,6 +62,8 @@
         android:text="@string/detect_object"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:drawableStart="@drawable/ic_switch_camera_black_24dp"
+        />
 
 </FrameLayout>
