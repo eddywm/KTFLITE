@@ -38,7 +38,9 @@
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:padding="2dp" />
+            android:padding="2dp"
+            android:contentDescription="@string/image_result_descr"
+            />
 
         <TextView
             android:id="@+id/tvResult"

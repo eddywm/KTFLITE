@@ -15,7 +15,7 @@ import com.wang.avi.AVLoadingIndicatorView
 import com.wonderkiln.camerakit.*
 import java.util.concurrent.Executors
 
-class StartupActivity : AppCompatActivity() {
+class AppActivity : AppCompatActivity() {
 
     companion object {
         private val MODEL_PATH = "mobilenet_quant_v1_224.tflite"

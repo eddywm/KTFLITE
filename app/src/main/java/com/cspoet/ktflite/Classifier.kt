@@ -105,7 +105,7 @@ class Classifier(
             val confidence = (labelProbArray[0][i].toInt() and 0xff) / 255.0f
             if (confidence > THRESHOLD) {
                 pq.add(IClassifier.Recognition("" + i,
-                        if (labelList.size > i) labelList[i] else "unknown",
+                        if (labelList.size > i) labelList[i] else "Unknown",
                         confidence))
             }
         }

@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/defaultBackground"
-    tools:context="com.cspoet.ktflite.StartupActivity">
+    tools:context="com.cspoet.ktflite.AppActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

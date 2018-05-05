@@ -2,4 +2,5 @@
     <string name="app_name">KTFLITE</string>
     <string name="toggle_camera">Switch Camera</string>
     <string name="detect_object">Detect Object</string>
+    <string name="image_result_descr">Image Result</string>
 </resources>
