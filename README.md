@@ -1,6 +1,6 @@
 # KTFLITE
 
-> Computer Vison Application Writen In Kotlin Powered By Tensorflow
+> Computer Vison Application Written In Kotlin Powered By Tensorflow Deep Learning library
 
 KTFLITE a mix of Kotlin and Tensorfow Lite is an application written entirely in Kotlin
 powered by Tensorflow, a Deep Learning library developed by Google.
@@ -20,13 +20,18 @@ powered by Tensorflow, a Deep Learning library developed by Google.
 
 ## Installation
 
-Download the binary or the Android APK on this link.
+Download the the Android APK on this   [link](https://raw.githubusercontent.com/eddywm/KTFLITE/master/releases/KTFLITE-0.0.1.apk)
+and install it.
+
+Clone the repo and open in Android Studio to study the code.
+
+``git clone https://github.com/eddywm/KTFLITE.git ``
 
 ## Meta
 
 Eddy WM – [Twitter](https://twitter.com/eddy_wm) – eddywmdev@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the Apache 2 license. See ``LICENSE`` file for more information.
 
 [Github](https://github.com/eddywm/)
 
