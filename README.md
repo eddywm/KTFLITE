@@ -1,5 +1,8 @@
 # KTFLITE
 
+
+<img src="./assets/app_logo_neo.png" width="148" alt="App Logo">
+
 > Computer Vison Application Written In Kotlin Powered By Tensorflow Deep Learning library
 
 KTFLITE a mix of Kotlin and Tensorfow Lite is an application written entirely in Kotlin
@@ -17,6 +20,7 @@ powered by Tensorflow, a Deep Learning library developed by Google.
    </p>
 <br>
 <br>
+
 ### Some inferences
 
 <br>
