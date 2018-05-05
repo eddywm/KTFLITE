@@ -6,16 +6,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:layout_width="300dp"
+        android:layout_height="260dp"
         android:layout_gravity="center"
         android:orientation="vertical">
 
 
         <RelativeLayout
             android:id="@+id/aviLoaderHolderView"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:gravity="center"
@@ -35,8 +35,8 @@
         <ImageView
             android:id="@+id/iViewResult"
             android:layout_marginTop="10dp"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
             android:padding="2dp"
             android:contentDescription="@string/image_result_descr"

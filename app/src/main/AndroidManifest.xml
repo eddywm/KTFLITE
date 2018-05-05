@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/app_logo_neo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AppActivity">
+        <activity android:name=".AppActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
