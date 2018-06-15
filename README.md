@@ -36,16 +36,27 @@ powered by Tensorflow, a Deep Learning library developed by Google.
 
 ## Installation
 
-Download the the Android APK on this   [link](https://raw.githubusercontent.com/eddywm/KTFLITE/master/releases/KTFLITE-0.0.1.apk)
-and install it.
-
 Clone the repo and open in Android Studio to study the code.
+
+Build APK with gradle to run on your Android device.
+
 
 ``git clone https://github.com/eddywm/KTFLITE.git ``
 
-## Meta
+``Open the project folder in Android Studio``
+
+
+## Author
 
 Eddy WM – [Twitter](https://twitter.com/eddy_wm) – eddywmdev@gmail.com
+Hi there my name is Eddy I am a software developer and an AI enthousiast, I like to build software to
+strenghten my understanding of complicated topics.
+
+I hope this project will help you getting started with Tensorflow using this real world application.
+
+## Meta
+
+Please **click the START button** to make this sample project known and help more people getting started with Tensorflow Lite.
 
 Distributed under the Apache 2 license. See ``LICENSE`` file for more information.
 
