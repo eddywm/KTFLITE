@@ -49,6 +49,7 @@ Build APK with gradle to run on your Android device.
 ## Author
 
 Eddy WM – [Twitter](https://twitter.com/eddy_wm) – eddywmdev@gmail.com
+
 Hi there my name is Eddy I am a software developer and an AI enthousiast, I like to build software to
 strenghten my understanding of complicated topics.
 
