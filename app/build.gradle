@@ -39,7 +39,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.wang.avi:library:2.1.3'
-
+    
+    dependencies { def appCenterSdkVersion = '1.11.3' 
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}" 
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}" }
 }
 
 apply plugin: 'kotlin-android'
