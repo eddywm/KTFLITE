@@ -2,8 +2,8 @@ package com.cspoet.ktflite
 
 import android.app.Dialog
 import android.graphics.Bitmap
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +11,12 @@ import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import com.wang.avi.AVLoadingIndicatorView
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import com.wonderkiln.camerakit.*
 import java.util.concurrent.Executors
+
 
 class AppActivity : AppCompatActivity() {
 
@@ -35,6 +38,10 @@ class AppActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCenter.start(
+            application, "92e13fbb-77e2-444e-a4ea-56a7dc805de6",
+            Analytics::class.java, Crashes::class.java
+        )
         setContentView(R.layout.activity_main)
         cameraView = findViewById(R.id.cameraView)
         imageViewResult = findViewById<ImageView>(R.id.imageViewResult)
