@@ -11,23 +11,12 @@ import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import com.microsoft.appcenter.AppCenter
-import com.microsoft.appcenter.analytics.Analytics
-import com.microsoft.appcenter.crashes.Crashes
 import com.wonderkiln.camerakit.*
 import java.util.concurrent.Executors
 
 
 class AppActivity : AppCompatActivity() {
-
-    companion object {
-        private val MODEL_PATH = "mobilenet_quant_v1_224.tflite"
-        private val LABEL_PATH = "labels.txt"
-        private val INPUT_SIZE = 224
-    }
-
     lateinit var classifier: Classifier
-
     private val executor = Executors.newSingleThreadExecutor()
     lateinit var textViewResult: TextView
     lateinit var btnDetectObject: Button
@@ -38,10 +27,6 @@ class AppActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        AppCenter.start(
-            application, "92e13fbb-77e2-444e-a4ea-56a7dc805de6",
-            Analytics::class.java, Crashes::class.java
-        )
         setContentView(R.layout.activity_main)
         cameraView = findViewById(R.id.cameraView)
         imageViewResult = findViewById<ImageView>(R.id.imageViewResult)
@@ -69,25 +54,19 @@ class AppActivity : AppCompatActivity() {
 
 
         cameraView.addCameraKitListener(object : CameraKitEventListener {
-            override fun onEvent(cameraKitEvent: CameraKitEvent) {
+            override fun onEvent(cameraKitEvent: CameraKitEvent) { }
 
-            }
-
-            override fun onError(cameraKitError: CameraKitError) {
-
-            }
+            override fun onError(cameraKitError: CameraKitError) { }
 
             override fun onImage(cameraKitImage: CameraKitImage) {
 
                 var bitmap = cameraKitImage.bitmap
-
                 bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false)
 
                 aviLoaderHolder.visibility = View.GONE
                 tvLoadingText.visibility = View.GONE
 
                 val results = classifier.recognizeImage(bitmap)
-
                 ivImageResult.setImageBitmap(bitmap)
                 tvTextResults.text = results.toString()
 
@@ -96,33 +75,24 @@ class AppActivity : AppCompatActivity() {
 
                 resultDialog.setCancelable(true)
 
-
-
             }
 
-            override fun onVideo(cameraKitVideo: CameraKitVideo) {
-
-            }
+            override fun onVideo(cameraKitVideo: CameraKitVideo) { }
         })
 
         btnToggleCamera.setOnClickListener { cameraView.toggleFacing() }
 
         btnDetectObject.setOnClickListener {
-
             cameraView.captureImage()
-
             resultDialog.show()
             tvTextResults.visibility = View.GONE
             ivImageResult.visibility = View.GONE
-
-
 
         }
 
         resultDialog.setOnDismissListener {
             tvLoadingText.visibility = View.VISIBLE
             aviLoaderHolder.visibility = View.VISIBLE
-
         }
 
         initTensorFlowAndLoadModel()
@@ -147,10 +117,10 @@ class AppActivity : AppCompatActivity() {
         executor.execute {
             try {
                 classifier = Classifier.create(
-                        assets,
-                        MODEL_PATH,
-                        LABEL_PATH,
-                        INPUT_SIZE)
+                    assets,
+                    MODEL_PATH,
+                    LABEL_PATH,
+                    INPUT_SIZE)
                 makeButtonVisible()
             } catch (e: Exception) {
                 throw RuntimeException("Error initializing TensorFlow!", e)
@@ -160,5 +130,12 @@ class AppActivity : AppCompatActivity() {
 
     private fun makeButtonVisible() {
         runOnUiThread { btnDetectObject.visibility = View.VISIBLE }
+    }
+
+
+    companion object {
+        private const val MODEL_PATH = "mobilenet_quant_v1_224.tflite"
+        private const val LABEL_PATH = "labels.txt"
+        private const val INPUT_SIZE = 224
     }
 }
