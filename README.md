@@ -49,12 +49,3 @@ Build APK with gradle to run on your Android device.
 ## Author
 
 Eddy WM – [Twitter](https://twitter.com/eddy_wm) – eddywmdev@gmail.com
-
-## Meta
-
-Please **click the START button** to make this sample project known and help more people getting started with Tensorflow Lite.
-
-Distributed under the Apache 2 license. See ``LICENSE`` file for more information.
-
-[Github](https://github.com/eddywm/)
-
