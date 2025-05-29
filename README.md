@@ -48,4 +48,4 @@ Build APK with gradle to run on your Android device.
 
 ## Author
 
-Eddy WM – [Twitter](https://twitter.com/eddy_wm) – eddywmdev@gmail.com
+Eddy WM – [Twitter](https://x.com/eddysgr) – eddywmdev@gmail.com
